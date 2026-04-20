@@ -12,9 +12,11 @@ import LeadForm from '../components/LeadForm.jsx';
 import Link from '../components/Link.jsx';
 import PropertyCard from '../components/PropertyCard.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
+import VentureImageScroller from '../components/VentureImageScroller.jsx';
 
 export default function Home() {
   const featuredProperties = properties.filter((property) => property.featured).slice(0, 4);
+  const trendingVentures = ventures.filter((venture) => venture.trending).slice(0, 3);
 
   return (
     <>
@@ -65,24 +67,98 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section trending-section">
+        <div className="container">
+          <div className="section-split">
+            <SectionHeader
+              eyebrow="Trending"
+              title="Trending ventures buyers are asking about"
+              text="A short home-page spotlight for high-interest ventures, led by Dream City HMDA in Shadnagar."
+            />
+            <Link href="/ventures" className="btn btn-soft">
+              View all ventures
+              <Icon name="ArrowRight" size={18} />
+            </Link>
+          </div>
+
+          <div className="venture-grid">
+            {trendingVentures.map((venture) => (
+              <article className="venture-card reveal" key={venture.id}>
+                <VentureImageScroller venture={venture} className="venture-card-media" />
+                <div className="venture-body">
+                  <div className="venture-kicker">
+                    <span>{venture.type}</span>
+                    <span>{venture.status}</span>
+                  </div>
+                  <h3>{venture.name}</h3>
+                  <p className="location-line">
+                    <Icon name="MapPin" size={16} />
+                    {venture.location}
+                  </p>
+                  <div className="venture-price">
+                    <strong>{venture.price}</strong>
+                    <span>{venture.units}</span>
+                  </div>
+                  <ul className="check-list compact-list">
+                    {venture.highlights.slice(0, 3).map((item) => (
+                      <li key={item}>
+                        <Icon name="Check" size={16} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="stats-band">
         <div className="container stats-grid">
           <div>
-            <strong>40+</strong>
-            <span>active listings</span>
+            <strong>1</strong>
+            <span>active listing</span>
           </div>
           <div>
             <strong>12</strong>
             <span>growth locations</span>
           </div>
           <div>
-            <strong>6</strong>
+            <strong>1</strong>
             <span>featured ventures</span>
           </div>
           <div>
             <strong>24 hr</strong>
             <span>lead response target</span>
           </div>
+        </div>
+      </section>
+
+      <section className="section management-preview home-management-highlight">
+        <div className="container management-layout">
+          <div>
+            <span className="eyebrow">Property management</span>
+            <h2>Own property without everyday follow-up</h2>
+            <p>
+              From tenant search and rent tracking to inspections and maintenance coordination, the owner desk keeps
+              your asset monitored and income-ready.
+            </p>
+            <div className="package-strip">
+              {managementPackages.map((item) => (
+                <span key={item.name}>{item.name}</span>
+              ))}
+            </div>
+            <Link href="/property-management" className="btn btn-primary btn-large">
+              Explore management plans
+              <Icon name="ArrowRight" size={18} />
+            </Link>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
+            alt="Property advisor presenting property management documents"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -136,47 +212,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <SectionHeader
-            eyebrow="Featured ventures"
-            title="Venture launches and inventory worth watching"
-            text="Every venture card is structured for quick sales conversations, site visits, and lead capture."
-          />
-
-          <div className="venture-grid">
-            {ventures.map((venture) => (
-              <article className="venture-card reveal" key={venture.id}>
-                <img src={venture.image} alt={venture.name} loading="lazy" />
-                <div className="venture-body">
-                  <div className="venture-kicker">
-                    <span>{venture.type}</span>
-                    <span>{venture.status}</span>
-                  </div>
-                  <h3>{venture.name}</h3>
-                  <p className="location-line">
-                    <Icon name="MapPin" size={16} />
-                    {venture.location}
-                  </p>
-                  <div className="venture-price">
-                    <strong>{venture.price}</strong>
-                    <span>{venture.units}</span>
-                  </div>
-                  <ul className="check-list compact-list">
-                    {venture.highlights.slice(0, 3).map((item) => (
-                      <li key={item}>
-                        <Icon name="Check" size={16} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section location-section">
         <div className="container">
           <SectionHeader
@@ -198,33 +233,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section management-preview">
-        <div className="container management-layout">
-          <div>
-            <span className="eyebrow">Property management</span>
-            <h2>Own property without everyday follow-up</h2>
-            <p>
-              From tenant search and rent tracking to inspections and maintenance coordination, the owner desk keeps
-              your asset monitored and income-ready.
-            </p>
-            <div className="package-strip">
-              {managementPackages.map((item) => (
-                <span key={item.name}>{item.name}</span>
-              ))}
-            </div>
-            <Link href="/property-management" className="btn btn-primary btn-large">
-              Explore management plans
-              <Icon name="ArrowRight" size={18} />
-            </Link>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
-            alt="Property advisor presenting property management documents"
-            loading="lazy"
-          />
         </div>
       </section>
 

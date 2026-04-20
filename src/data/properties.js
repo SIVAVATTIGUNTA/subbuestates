@@ -85,52 +85,19 @@ export const locations = [
 
 export const ventures = [
   {
-    id: 'golden-orchard',
-    name: 'Golden Orchard',
+    id: 'dream-city-hmda-shadnagar',
+    name: 'Dream City HMDA',
     type: 'Open Plots',
     location: 'Shadnagar',
-    status: 'Ready to register',
+    status: 'Trending',
     approval: 'HMDA approved',
-    price: 'From Rs. 28L',
-    units: '167 - 500 sq yd',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['60 ft entrance road', 'Underground drainage', 'Avenue plantation', 'Clear title support']
-  },
-  {
-    id: 'skyline-heights',
-    name: 'Skyline Heights',
-    type: 'Premium Flats',
-    location: 'Kondapur',
-    status: 'Under construction',
-    approval: 'RERA registered',
-    price: 'From Rs. 82L',
-    units: '2 and 3 BHK',
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['Clubhouse', 'EV charging', 'Work pods', 'High rental zone']
-  },
-  {
-    id: 'orbit-business-park',
-    name: 'Orbit Business Park',
-    type: 'Commercial Land',
-    location: 'Shamshabad',
-    status: 'Limited inventory',
-    approval: 'Conversion ready',
-    price: 'From Rs. 4.2Cr',
-    units: '1 - 5 acres',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['ORR access', 'Warehouse suitable', 'Wide frontage', 'Lease assistance']
-  },
-  {
-    id: 'harvest-valley',
-    name: 'Harvest Valley Farms',
-    type: 'Agriculture Land',
-    location: 'Chevella',
-    status: 'Managed farms',
-    approval: 'Clear passbooks',
-    price: 'From Rs. 22L per acre',
-    units: '1 - 12 acres',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-    highlights: ['Drip irrigation', 'Farm fencing', 'Weekend access', 'Caretaker option']
+    price: 'Rs. 17,000 per sq yd',
+    units: 'Plots available',
+    image: '/assets/dreamcity.jpeg',
+    gallery: ['/assets/dreamcity.jpeg', '/assets/dreamcity1.jpeg', '/assets/dreamcity2.jpeg'],
+    trending: true,
+    highlights: ['East facing: Rs. 200 extra per sq yd', 'North East corner: Rs. 500 extra per sq yd', 'Other corner plots: Rs. 300 extra per sq yd', 'Located in Shadnagar growth corridor'],
+    priceAddons: ['East facing + Rs. 200/sq yd', 'North East corner + Rs. 500/sq yd', 'Other corner plots + Rs. 300/sq yd']
   }
 ];
 
@@ -158,174 +125,6 @@ export const properties = [
     amenities: ['Blacktop roads', 'Electricity lines', 'Underground drainage', 'Compound wall', 'Avenue plantation', 'Children play area'],
     locationHighlights: ['8 min to NH 44', '18 min to Regional Ring Road proposed node', '35 min to airport'],
     featured: true
-  },
-  {
-    id: 'skyline-heights-3bhk-kondapur',
-    title: 'Skyline Heights 3 BHK Residence',
-    slug: 'skyline-heights-3bhk-kondapur',
-    type: 'flats',
-    venture: 'Skyline Heights',
-    location: 'Kondapur',
-    price: 'Rs. 1.18Cr',
-    priceValue: 118,
-    area: '1,840 sq ft',
-    status: 'Under construction',
-    badge: 'High rental yield',
-    approval: 'RERA',
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'A spacious 3 BHK apartment planned for working professionals and families who want clubhouse amenities and fast IT corridor access.',
-    amenities: ['Clubhouse', 'Gymnasium', 'EV charging', '24/7 security', 'Co-working lounge', 'Power backup'],
-    locationHighlights: ['10 min to Hitec City', '12 min to Gachibowli', 'Walkable retail and schools'],
-    featured: true
-  },
-  {
-    id: 'mokila-villa-corner-plot',
-    title: 'Mokila Villa Community Corner Plot',
-    slug: 'mokila-villa-corner-plot',
-    type: 'plots',
-    venture: 'Lakeview Meadows',
-    location: 'Mokila',
-    price: 'Rs. 74L',
-    priceValue: 74,
-    area: '267 sq yd',
-    status: 'Limited inventory',
-    badge: 'Corner unit',
-    approval: 'DTCP',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'Corner plot in a premium villa neighborhood with peaceful surroundings and fast access to the financial district growth belt.',
-    amenities: ['Gated layout', 'Water connection', 'Street lighting', 'Park zone', 'Security cabin', 'Vastu-friendly plots'],
-    locationHighlights: ['20 min to Financial District', 'Near reputed schools', 'Fast villa community growth'],
-    featured: false
-  },
-  {
-    id: 'orbit-commercial-frontage-land',
-    title: 'ORR Frontage Commercial Land',
-    slug: 'orbit-commercial-frontage-land',
-    type: 'commercial',
-    venture: 'Orbit Business Park',
-    location: 'Shamshabad',
-    price: 'Rs. 4.2Cr',
-    priceValue: 420,
-    area: '1 acre',
-    status: 'Conversion ready',
-    badge: 'Road facing',
-    approval: 'Legal verified',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'A high-visibility commercial parcel suitable for warehouses, showrooms, service centers, or long-term lease income.',
-    amenities: ['Wide road frontage', 'Power access', 'Truck movement', 'Clear title check', 'Lease support', 'Survey assistance'],
-    locationHighlights: ['Near airport corridor', 'ORR connectivity', 'Logistics and hospitality demand'],
-    featured: true
-  },
-  {
-    id: 'harvest-valley-managed-farm-acre',
-    title: 'Harvest Valley Managed Farm Acre',
-    slug: 'harvest-valley-managed-farm-acre',
-    type: 'agriculture',
-    venture: 'Harvest Valley Farms',
-    location: 'Chevella',
-    price: 'Rs. 22L',
-    priceValue: 22,
-    area: '1 acre',
-    status: 'Managed farms',
-    badge: 'Farm care',
-    approval: 'Clear passbook',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'A peaceful managed farm parcel with fencing, water access, and optional maintenance for hands-off owners.',
-    amenities: ['Fencing', 'Bore access', 'Drip irrigation', 'Caretaker support', 'Internal track', 'Farmhouse planning support'],
-    locationHighlights: ['Weekend-drive distance', 'Near village road', 'Good soil and water access'],
-    featured: true
-  },
-  {
-    id: 'amaravati-growth-corridor-plot',
-    title: 'Amaravati Growth Corridor Plot',
-    slug: 'amaravati-growth-corridor-plot',
-    type: 'plots',
-    venture: 'Capital County',
-    location: 'Amaravati',
-    price: 'Rs. 39L',
-    priceValue: 39,
-    area: '200 sq yd',
-    status: 'Pre-launch',
-    badge: 'Investor pick',
-    approval: 'Layout submitted',
-    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'A plotted investment option in the Amaravati capital growth corridor with attractive pre-launch pricing.',
-    amenities: ['Proposed gated layout', '30 and 40 ft roads', 'Park allocation', 'Boundary stones', 'Documentation support', 'Flexible payment'],
-    locationHighlights: ['Capital region access', 'Near highway link', 'Institutional growth corridor'],
-    featured: false
-  },
-  {
-    id: 'guntur-midtown-2bhk-flat',
-    title: 'Guntur Midtown 2 BHK Flat',
-    slug: 'guntur-midtown-2bhk-flat',
-    type: 'flats',
-    venture: 'Midtown Residences',
-    location: 'Guntur',
-    price: 'Rs. 58L',
-    priceValue: 58,
-    area: '1,260 sq ft',
-    status: 'Ready to move',
-    badge: 'Family ready',
-    approval: 'Approved plan',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'A ready-to-move 2 BHK home near daily conveniences, schools, and transport routes in central Guntur.',
-    amenities: ['Lift', 'Parking', 'Power backup', 'CCTV', 'Modular kitchen provision', 'Municipal water'],
-    locationHighlights: ['Central Guntur address', 'Near schools and hospitals', 'Quick possession'],
-    featured: false
-  },
-  {
-    id: 'visakhapatnam-industrial-acre',
-    title: 'Visakhapatnam Industrial Land Parcel',
-    slug: 'visakhapatnam-industrial-acre',
-    type: 'commercial',
-    venture: 'Coastal Trade Yard',
-    location: 'Visakhapatnam',
-    price: 'Rs. 2.8Cr',
-    priceValue: 280,
-    area: '0.75 acre',
-    status: 'Legal verified',
-    badge: 'Port access',
-    approval: 'Industrial use fit',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'
-    ],
-    summary: 'Industrial-use fit parcel suited for small manufacturing, storage, or service operations close to coastal trade movement.',
-    amenities: ['Approach road', 'Power line nearby', 'Compound-ready', 'Survey completed', 'Document review', 'Brokerage support'],
-    locationHighlights: ['Port-side business demand', 'Industrial neighborhood', 'Stable lease potential'],
-    featured: false
   }
 ];
 

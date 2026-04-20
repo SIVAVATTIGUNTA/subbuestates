@@ -42,6 +42,9 @@ The current logo is served from:
 public/assets/subbu_estate_logo.jpg
 ```
 
+Enquiry forms submit through FormSubmit to the email address configured in `src/data/properties.js`.
+The first live form submission may require inbox activation from FormSubmit before emails start arriving.
+
 Placeholder visuals currently use public Unsplash image URLs. Replace them with owned project photos or approved Google Images assets before production launch.
 
 ## SEO

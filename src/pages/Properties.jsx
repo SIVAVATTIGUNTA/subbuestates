@@ -75,7 +75,7 @@ export default function Properties() {
             </div>
 
             {filteredProperties.length ? (
-              <div className="property-grid">
+              <div className="property-grid listing-property-grid">
                 {filteredProperties.map((property) => (
                   <PropertyCard key={property.id} property={property} />
                 ))}

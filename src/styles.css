@@ -470,6 +470,15 @@ textarea {
   font-weight: 800;
 }
 
+.form-submit-frame {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .stats-band {
   background: #11151a;
   color: #fff;
@@ -585,6 +594,10 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+}
+
+.listing-property-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .property-card,
@@ -729,10 +742,78 @@ textarea {
   overflow: hidden;
 }
 
-.venture-card img {
+.trending-section {
+  background: linear-gradient(180deg, var(--surface) 0%, #f7eddf 100%);
+}
+
+.trending-section .venture-grid {
+  grid-template-columns: 1fr;
+}
+
+.trending-section .venture-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+}
+
+.trending-section .venture-card-media {
+  height: 430px;
+}
+
+.trending-section .venture-card-media img {
+  height: 430px;
+}
+
+.trending-section .venture-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.venture-media-scroller {
+  position: relative;
+  overflow: hidden;
+  background: #11151a;
+}
+
+.venture-image-track {
+  display: flex;
   width: 100%;
-  height: 190px;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(210, 160, 102, 0.74) rgba(255, 250, 242, 0.22);
+}
+
+.venture-image-track img {
+  flex: 0 0 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
   object-fit: cover;
+}
+
+.venture-card-media {
+  height: 210px;
+}
+
+.venture-card-media img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.scroll-pill {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #11151a;
+  background: rgba(255, 250, 242, 0.9);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .venture-body {
@@ -839,6 +920,13 @@ textarea {
     radial-gradient(circle at top right, rgba(210, 160, 102, 0.18), transparent 34%),
     linear-gradient(135deg, #11151a, #142018 88%);
   color: #fff;
+}
+
+.home-management-highlight {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(210, 160, 102, 0.24);
+  border-bottom: 1px solid rgba(210, 160, 102, 0.24);
 }
 
 .management-layout {
@@ -1015,7 +1103,12 @@ textarea {
   box-shadow: var(--shadow-soft);
 }
 
-.venture-detail-card img {
+.venture-detail-media {
+  height: 100%;
+  min-height: 360px;
+}
+
+.venture-detail-media img {
   width: 100%;
   height: 100%;
   min-height: 360px;
@@ -1024,6 +1117,22 @@ textarea {
 
 .venture-detail-body {
   padding: 30px;
+}
+
+.price-addon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -4px 0 18px;
+}
+
+.price-addon-grid span {
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--brand-strong);
+  background: #e6f0e7;
+  font-size: 0.82rem;
+  font-weight: 900;
 }
 
 .detail-facts {
@@ -1449,7 +1558,8 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .venture-detail-card img {
+  .venture-detail-media,
+  .venture-detail-media img {
     min-height: 280px;
     max-height: 360px;
   }
@@ -1533,6 +1643,15 @@ textarea {
 
   .listing-layout {
     grid-template-columns: 1fr;
+  }
+
+  .trending-section .venture-card {
+    grid-template-columns: 1fr;
+  }
+
+  .trending-section .venture-card-media,
+  .trending-section .venture-card-media img {
+    height: 300px;
   }
 
   .filter-panel,

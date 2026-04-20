@@ -2,30 +2,31 @@ import Icon from '../components/Icon.jsx';
 import LeadForm from '../components/LeadForm.jsx';
 import PageHero from '../components/PageHero.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
+import VentureImageScroller from '../components/VentureImageScroller.jsx';
 import { company, ventures } from '../data/properties.js';
 
 export default function Ventures() {
   return (
     <>
       <PageHero
-        eyebrow="Featured ventures"
-        title="Premium ventures across plots, flats, commercial land, and farm land"
-        text="Use venture pages to promote launches, availability, approvals, price bands, and site visit enquiries."
+        eyebrow="Current venture"
+        title="Dream City HMDA open plots in Shadnagar"
+        text="Explore current Dream City pricing, facing premiums, corner plot premiums, site photos, and enquiry actions."
         image="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1800&q=85"
       />
 
       <section className="section">
         <div className="container">
           <SectionHeader
-            eyebrow="Venture portfolio"
-            title="Development-ready venture cards"
-            text="Each venture contains core conversion content: approval, inventory type, pricing, highlights, and contact actions."
+            eyebrow="Available venture"
+            title="Dream City HMDA"
+            text="Only the current active venture is shown now. More ventures can be added here later from the data file."
           />
 
           <div className="venture-list">
             {ventures.map((venture) => (
               <article className="venture-detail-card reveal" key={venture.id}>
-                <img src={venture.image} alt={venture.name} loading="lazy" />
+                <VentureImageScroller venture={venture} className="venture-detail-media" />
                 <div className="venture-detail-body">
                   <div className="venture-kicker">
                     <span>{venture.type}</span>
@@ -50,6 +51,13 @@ export default function Ventures() {
                       Approval
                     </span>
                   </div>
+                  {venture.priceAddons?.length ? (
+                    <div className="price-addon-grid">
+                      {venture.priceAddons.map((item) => (
+                        <span key={item}>{item}</span>
+                      ))}
+                    </div>
+                  ) : null}
                   <ul className="check-list">
                     {venture.highlights.map((item) => (
                       <li key={item}>

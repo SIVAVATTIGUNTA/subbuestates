@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { company } from '../data/properties.js';
 import Icon from './Icon.jsx';
 
@@ -6,14 +6,26 @@ const interestOptions = ['Open Plots', 'Flats', 'Commercial Land', 'Agriculture 
 
 export default function LeadForm({ compact = false, title = 'Request a call back', source = 'Website enquiry' }) {
   const [submitted, setSubmitted] = useState(false);
+  const frameName = `lead-frame-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
 
   function handleSubmit(event) {
-    event.preventDefault();
     setSubmitted(true);
   }
 
   return (
-    <form className={`lead-form ${compact ? 'lead-form-compact' : ''}`} onSubmit={handleSubmit}>
+    <form
+      className={`lead-form ${compact ? 'lead-form-compact' : ''}`}
+      action={`https://formsubmit.co/${company.email}`}
+      method="POST"
+      target={frameName}
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="_subject" value={`New enquiry from ${title}`} />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="source" value={source} />
+      <input type="hidden" name="page_url" value={window.location.href} />
+
       <div className="form-heading">
         <span className="icon-badge">
           <Icon name="Phone" size={18} />
@@ -60,9 +72,10 @@ export default function LeadForm({ compact = false, title = 'Request a call back
 
       {submitted ? (
         <p className="form-success" role="status">
-          Thank you. Our advisor will contact you shortly.
+          Thank you. Your enquiry is being sent to {company.email}.
         </p>
       ) : null}
+      <iframe className="form-submit-frame" title="Lead form submission" name={frameName} />
     </form>
   );
 }
