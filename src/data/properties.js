@@ -103,27 +103,27 @@ export const ventures = [
 
 export const properties = [
   {
-    id: 'golden-orchard-east-facing-plot',
-    title: 'Golden Orchard East Facing Plot',
-    slug: 'golden-orchard-east-facing-plot',
+    id: 'dream-city-hmda-shadnagar',
+    title: 'Dream City HMDA',
+    slug: 'dream-city-hmda-shadnagar',
     type: 'plots',
-    venture: 'Golden Orchard',
+    venture: 'Dream City HMDA',
     location: 'Shadnagar',
-    price: 'Rs. 31.5L',
-    priceValue: 31.5,
-    area: '183 sq yd',
-    status: 'Ready to register',
-    badge: 'Featured',
+    price: 'Rs. 17,000/sq yd',
+    priceValue: 17,
+    area: 'Open plots',
+    status: 'Available',
+    badge: 'Trending',
     approval: 'HMDA',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    image: '/assets/dreamcity.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+      '/assets/dreamcity.jpeg',
+      '/assets/dreamcity1.jpeg',
+      '/assets/dreamcity2.jpeg'
     ],
-    summary: 'A premium east-facing plot in a fully planned venture with wide roads, greenery, and quick access to the Bengaluru highway.',
-    amenities: ['Blacktop roads', 'Electricity lines', 'Underground drainage', 'Compound wall', 'Avenue plantation', 'Children play area'],
-    locationHighlights: ['8 min to NH 44', '18 min to Regional Ring Road proposed node', '35 min to airport'],
+    summary: 'Dream City HMDA open plots in Shadnagar with base pricing at Rs. 17,000 per sq yd and facing or corner premiums based on plot selection.',
+    amenities: ['HMDA approved venture', 'Open plots in Shadnagar', 'East facing: Rs. 200 extra per sq yd', 'North East corner: Rs. 500 extra per sq yd', 'Other corner plots: Rs. 300 extra per sq yd', 'Site visit support'],
+    locationHighlights: ['Shadnagar growth corridor', 'Suitable for investment and future construction', 'Call for exact plot availability'],
     featured: true
   }
 ];

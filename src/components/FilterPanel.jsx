@@ -12,7 +12,9 @@ export default function FilterPanel({ filters, onChange, locations, resultCount 
         <Icon name="Sliders" size={20} />
         <div>
           <h2>Find your property</h2>
-          <p>{resultCount} matching listings</p>
+          <p>
+            {resultCount} matching {resultCount === 1 ? 'listing' : 'listings'}
+          </p>
         </div>
       </div>
 

@@ -597,7 +597,7 @@ textarea {
 }
 
 .listing-property-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .property-card,
@@ -1145,7 +1145,7 @@ textarea {
 }
 
 .listings-section {
-  background: linear-gradient(90deg, #fff 0%, #fff 62%, var(--surface-soft) 62%, var(--surface-soft) 100%);
+  background: #fff;
 }
 
 .listing-layout {

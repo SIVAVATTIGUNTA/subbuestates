@@ -65,7 +65,7 @@ export default function Properties() {
             <div className="listing-topbar">
               <SectionHeader
                 eyebrow="Available inventory"
-                title={`${filteredProperties.length} properties found`}
+                title={`${filteredProperties.length} ${filteredProperties.length === 1 ? 'property' : 'properties'} found`}
                 text="Every card includes pricing, approval, status, and a direct route to enquiry."
               />
               <a className="btn btn-primary" href={`tel:${company.phone}`}>
