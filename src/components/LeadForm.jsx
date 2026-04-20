@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { company } from '../data/properties.js';
 import Icon from './Icon.jsx';
 
 const interestOptions = ['Open Plots', 'Flats', 'Commercial Land', 'Agriculture Land', 'Property Management'];
@@ -30,7 +31,7 @@ export default function LeadForm({ compact = false, title = 'Request a call back
 
       <label>
         Mobile number
-        <input type="tel" name="phone" placeholder="+91 98765 43210" required />
+        <input type="tel" name="phone" placeholder={company.phoneDisplay} required />
       </label>
 
       <label>

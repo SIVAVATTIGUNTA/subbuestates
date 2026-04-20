@@ -1,5 +1,6 @@
 import Icon from './Icon.jsx';
 import Link from './Link.jsx';
+import { company } from '../data/properties.js';
 
 const typeLabel = {
   plots: 'Open Plot',
@@ -50,7 +51,7 @@ export default function PropertyCard({ property }) {
           <Link href={`/properties/${property.slug}`} className="text-link">
             View details <Icon name="ChevronRight" size={16} />
           </Link>
-          <a className="mini-cta" href="tel:+919876543210">
+          <a className="mini-cta" href={`tel:${company.phone}`}>
             <Icon name="Phone" size={16} />
             Call
           </a>

@@ -36,6 +36,12 @@ Primary dummy content, property listings, ventures, packages, phone numbers, and
 src/data/properties.js
 ```
 
+The current logo is served from:
+
+```text
+public/assets/subbu_estate_logo.jpg
+```
+
 Placeholder visuals currently use public Unsplash image URLs. Replace them with owned project photos or approved Google Images assets before production launch.
 
 ## SEO

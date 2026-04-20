@@ -8,7 +8,9 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <Link href="/" className="brand footer-brand">
-            <span className="brand-mark">SE</span>
+            <span className="brand-logo">
+              <img src="/assets/subbu_estate_logo.jpg" alt="" />
+            </span>
             <span>
               <strong>{company.name}</strong>
               <small>{company.tagline}</small>
@@ -18,7 +20,7 @@ export default function Footer() {
             Premium property advisory for buyers, investors, land owners, and NRI owners across high-growth locations.
           </p>
           <div className="footer-contact">
-            <a href="tel:+919876543210">
+            <a href={`tel:${company.phone}`}>
               <Icon name="Phone" size={17} />
               {company.phoneDisplay}
             </a>

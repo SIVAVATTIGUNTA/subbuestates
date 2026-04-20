@@ -3,7 +3,7 @@ import LeadForm from '../components/LeadForm.jsx';
 import Link from '../components/Link.jsx';
 import PropertyCard from '../components/PropertyCard.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { properties } from '../data/properties.js';
+import { company, properties } from '../data/properties.js';
 
 export default function PropertyDetail({ property }) {
   const related = properties.filter((item) => item.type === property.type && item.id !== property.id).slice(0, 3);
@@ -111,13 +111,13 @@ export default function PropertyDetail({ property }) {
 
           <aside className="detail-sidebar">
             <h3>Fast actions</h3>
-            <a className="btn btn-primary full-width" href="tel:+919876543210">
+            <a className="btn btn-primary full-width" href={`tel:${company.phone}`}>
               <Icon name="Phone" size={17} />
               Call for site visit
             </a>
             <a
               className="btn btn-soft full-width"
-              href={`https://wa.me/919876543210?text=Hi%20Subbu%20Estates%2C%20I%20want%20details%20about%20${encodeURIComponent(
+              href={`https://wa.me/${company.whatsapp}?text=Hi%20Subbu%20Estates%2C%20I%20want%20details%20about%20${encodeURIComponent(
                 property.title
               )}.`}
               target="_blank"

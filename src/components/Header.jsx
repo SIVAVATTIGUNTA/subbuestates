@@ -23,7 +23,9 @@ export default function Header({ path }) {
     <header className="site-header">
       <div className="container nav-shell">
         <Link href="/" className="brand" onClick={closeMenu} aria-label="Subbu Estates home">
-          <span className="brand-mark">SE</span>
+          <span className="brand-logo">
+            <img src="/assets/subbu_estate_logo.jpg" alt="" />
+          </span>
           <span>
             <strong>{company.name}</strong>
             <small>Real estate advisory</small>
@@ -44,7 +46,7 @@ export default function Header({ path }) {
         </nav>
 
         <div className="nav-actions">
-          <a className="btn btn-ghost nav-call" href="tel:+919876543210">
+          <a className="btn btn-ghost nav-call" href={`tel:${company.phone}`}>
             <Icon name="Phone" size={17} />
             Call
           </a>

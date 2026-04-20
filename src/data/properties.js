@@ -1,12 +1,12 @@
 export const company = {
   name: 'Subbu Estates',
   tagline: 'Verified ventures. Clear guidance. Confident ownership.',
-  phone: '+91 98765 43210',
-  phoneDisplay: '+91 98765 43210',
-  whatsapp: '919876543210',
-  email: 'hello@subbuestates.com',
-  address: 'Road No. 36, Jubilee Hills, Hyderabad, Telangana',
-  hours: 'Mon - Sat, 9:30 AM - 7:00 PM'
+  phone: '+919391080716',
+  phoneDisplay: '+91 93910 80716',
+  whatsapp: '919391080716',
+  email: 'subbu.vaddelli@gmail.com',
+  address: 'F-69,Madhura Nagar, Hyderabad, Telangana',
+  hours: 'Mon - Sun, 10:00 AM - 7:00 PM'
 };
 
 export const propertyTypes = [

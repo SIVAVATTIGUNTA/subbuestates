@@ -5,7 +5,7 @@ import LeadForm from '../components/LeadForm.jsx';
 import PageHero from '../components/PageHero.jsx';
 import PropertyCard from '../components/PropertyCard.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { properties } from '../data/properties.js';
+import { company, properties } from '../data/properties.js';
 
 function getInitialType() {
   const params = new URLSearchParams(window.location.search);
@@ -68,7 +68,7 @@ export default function Properties() {
                 title={`${filteredProperties.length} properties found`}
                 text="Every card includes pricing, approval, status, and a direct route to enquiry."
               />
-              <a className="btn btn-primary" href="tel:+919876543210">
+              <a className="btn btn-primary" href={`tel:${company.phone}`}>
                 <Icon name="Phone" size={17} />
                 Speak to advisor
               </a>

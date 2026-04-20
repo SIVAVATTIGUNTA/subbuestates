@@ -4,7 +4,7 @@
   "description": "Premium real estate ventures, properties, and property management services.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f7f9f7",
-  "theme_color": "#0f6b5f",
+  "background_color": "#11151a",
+  "theme_color": "#11151a",
   "icons": []
 }

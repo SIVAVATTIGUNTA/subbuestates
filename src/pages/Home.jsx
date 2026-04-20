@@ -38,7 +38,7 @@ export default function Home() {
                 <Icon name="Search" size={18} />
                 Browse properties
               </Link>
-              <a className="btn btn-light btn-large" href="tel:+919876543210">
+              <a className="btn btn-light btn-large" href={`tel:${company.phone}`}>
                 <Icon name="Phone" size={18} />
                 Talk to advisor
               </a>

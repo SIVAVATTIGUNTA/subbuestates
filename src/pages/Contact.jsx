@@ -24,7 +24,7 @@ export default function Contact() {
             />
 
             <div className="contact-list">
-              <a href="tel:+919876543210">
+              <a href={`tel:${company.phone}`}>
                 <span className="icon-badge">
                   <Icon name="Phone" size={20} />
                 </span>

@@ -4,7 +4,7 @@ import Icon from './Icon.jsx';
 export default function FloatingCtas() {
   return (
     <div className="floating-ctas" aria-label="Quick contact actions">
-      <a className="float-call" href="tel:+919876543210" aria-label="Call Subbu Estates">
+      <a className="float-call" href={`tel:${company.phone}`} aria-label="Call Subbu Estates">
         <Icon name="Phone" size={20} />
         <span>Call</span>
       </a>

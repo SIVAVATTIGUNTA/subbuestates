@@ -2,7 +2,7 @@ import Icon from '../components/Icon.jsx';
 import LeadForm from '../components/LeadForm.jsx';
 import PageHero from '../components/PageHero.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { ventures } from '../data/properties.js';
+import { company, ventures } from '../data/properties.js';
 
 export default function Ventures() {
   return (
@@ -59,13 +59,13 @@ export default function Ventures() {
                     ))}
                   </ul>
                   <div className="card-actions">
-                    <a className="btn btn-primary" href="tel:+919876543210">
+                    <a className="btn btn-primary" href={`tel:${company.phone}`}>
                       <Icon name="Phone" size={17} />
                       Call for availability
                     </a>
                     <a
                       className="btn btn-soft"
-                      href={`https://wa.me/919876543210?text=Hi%20Subbu%20Estates%2C%20I%20want%20details%20about%20${encodeURIComponent(
+                      href={`https://wa.me/${company.whatsapp}?text=Hi%20Subbu%20Estates%2C%20I%20want%20details%20about%20${encodeURIComponent(
                         venture.name
                       )}.`}
                       target="_blank"
